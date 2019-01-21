@@ -1,0 +1,33 @@
+/* pages/shopList/shopList.wxss */
+.shop{
+  display: flex;
+  margin-top: 5rpx;
+  border-bottom: 1px solid gainsboro;
+}
+.shop .shop-info{
+  display: flex;
+  flex-direction: column;
+}
+.shop .shop-info .shop-name{
+  font-size: 30rpx;
+}
+.shop .shop-info .shop-phone{
+  font-size: 30rpx;
+  color: rgb(197, 193, 193);
+}
+.shop .shop-info .shop-addr{
+  font-size: 30rpx;
+  color: rgb(197, 193, 193);
+}
+.shop .shop-info .shop-time{
+  font-size:30rpx;
+  color: rgb(197, 193, 193);
+}
+.shop image{
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 250rpx;
+  height: 200rpx;
+}

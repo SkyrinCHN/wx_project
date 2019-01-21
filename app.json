@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shopList/shopList",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -8,5 +9,33 @@
     "navigationBarBackgroundColor": "#ff6600",
     "navigationBarTitleText": "微信练手项目",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/assets/tabs/home.png",
+        "selectedIconPath": "/img/assets/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "消息",
+        "iconPath": "/img/assets/tabs/message.png",
+        "selectedIconPath": "/img/assets/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "/img/assets/tabs/profile.png",
+        "selectedIconPath": "/img/assets/tabs/profile-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "联系我",
+        "iconPath": "/img/assets/tabs/contact.png",
+        "selectedIconPath": "/img/assets/tabs/contact-active.png"
+      }
+    ]
   }
 }
