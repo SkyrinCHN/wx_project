@@ -1,0 +1,2 @@
+<!--pages/test/test.wxml-->
+<view bindtap='chose'>操作</view>

@@ -3,14 +3,20 @@
   display: flex;
   margin-top: 5rpx;
   border-bottom: 1px solid gainsboro;
+  position: relative;
 }
 .shop .shop-info{
   display: flex;
   flex-direction: column;
+  width: 280rpx;
 }
 .shop .shop-info .shop-name{
-  font-size: 30rpx;
+  font-size: 30rpx;   /**/
+  overflow: hidden; /*店名超出部分隐藏*/
+  white-space: nowrap; /*不允许换行*/
+  text-overflow: ellipsis; /*超出部分用...*/
 }
+
 .shop .shop-info .shop-phone{
   font-size: 30rpx;
   color: rgb(197, 193, 193);
@@ -30,4 +36,19 @@
   margin-bottom: 10rpx;
   width: 250rpx;
   height: 200rpx;
+}
+.shop .shop-star{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+.star-before{
+  color: #e23d13;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.star-after{
+  color: #643567;
 }

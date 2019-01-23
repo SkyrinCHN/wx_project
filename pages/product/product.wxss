@@ -1,0 +1,5 @@
+/* pages/product/product.wxss */
+
+.cell-item{
+  font-size: 30rpx;
+}

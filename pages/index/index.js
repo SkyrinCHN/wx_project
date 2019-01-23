@@ -1,67 +1,66 @@
 Page({
-
+  // handleTap1:function(){
+  //   wx.redirectTo({
+  //     url: '/pages/shopList/shopList',
+  //   })
+  // },
+  // handleTap2:function(){
+  //   wx.navigateTo({
+  //     url: '/pages/logs/logs',
+  //   })
+  // },
+  // handleTap3:function(e){
+  //   var age = e.target.dataset.age;
+  //   wx.navigateTo({
+  //     url: '/pages/logs/logs?age='+age,
+  //   })
+  // },
+  handleTap:function(e){
+    //拿到九宫格每一格相对应的id
+    var id = e.target.dataset.id;
+    var page = "/pages/shopList/shopList";
+    if(id ==1){page = "/pages/shopList/shopList"}
+    wx.navigateTo({url: page})},
   /**
    * 页面的初始数据
    */
   data: {
-    list: [{
-      id: 1,
-      img_url: "http://localhost:3000/img/banner1.png"
-    }, {
-      id: 1,
-      img_url: "http://localhost:3000/img/banner2.png"
-    }, {
-      id: 1,
-      img_url: "http://localhost:3000/img/banner3.png"
-    }],
-
-
-    navlist: [{
-      id: 1,
-      img_url: "http://localhost:3000/img/icons/grid-01.png",
-      title: "美食"
-    }, {
-      id: 2,
-      img_url: "http://localhost:3000/img/icons/grid-02.png",
-      title: "洗浴"
-    }, {
-      id: 3,
-      img_url: "http://localhost:3000/img/icons/grid-03.png",
-      title: "结婚啦"
-    }, {
-      id: 4,
-      img_url: "http://localhost:3000/img/icons/grid-04.png",
-      title: "KTV"
-    }, {
-      id: 5,
-      img_url: "http://localhost:3000/img/icons/grid-05.png",
-      title: "找工作"
-    }, {
-      id: 6,
-      img_url: "http://localhost:3000/img/icons/grid-06.png",
-      title: "指导班"
-    }, {
-      id: 7,
-      img_url: "http://localhost:3000/img/icons/grid-07.png",
-      title: "汽车保养"
-    }, {
-      id: 8,
-      img_url: "http://localhost:3000/img/icons/grid-08.png",
-      title: "租房"
-    }, {
-      id: 9,
-      img_url: "http://localhost:3000/img/icons/grid-09.png",
-      title: "装修"
-    }, ]
+    list: [],//轮播图
+    navlist: [] //九宫格
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getNavlist(); //调用获取九宫格方法
+    this.getImages();//调用获取轮播图方法
   },
-
+  getNavlist:function(){//获取九宫格信息
+    var url = "http://localhost:3000/getNavImages";
+    wx.request({
+      url: url,
+      success:(res)=>{
+        this.setData({
+          navlist:res.data
+        })
+      },
+      fail:(res)=>{
+        console.log(res.data);
+      }
+    })
+  },
+  getImages:function(){//获取轮播图
+    var url ="http://localhost:3000/getImages";
+    wx.request({
+      url: url,
+      success:(res)=>{
+        this.setData({
+          list:res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,37 @@
+/* pages/profile/profile.wxss */
+.avatar {
+  background: #ff6600;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar image {
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, .2);
+}
+
+.profile-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #d4d3d3;
+  font-size: 16px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: space-between; /*两端对齐*/
+  align-items: center;    /*垂直居中*/
+}
+
+/* 右侧的小符号 */
+.arrow::after {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid #ccc;
+  border-right: 3rpx solid #ccc;
+  transform: rotate(45deg);
+}

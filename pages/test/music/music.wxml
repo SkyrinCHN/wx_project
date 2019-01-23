@@ -1,0 +1,7 @@
+<!-- pages/test/logout05/logout05.wxml -->
+<view bindtap='play'>播放</view>
+<view bindtap='pause'>暂停播放</view>
+<view bindtap='stop'>停止播放</view>
+<view>
+  <image src="{{isPlaying?'http://localhost:3000/music-stop.png':'http://localhost:3000/music-start.png'}}" lazy-load='true' style='width:56rpx;height:56rpx' bindtap='onMusicTap'></image>
+</view>

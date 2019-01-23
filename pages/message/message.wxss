@@ -1,0 +1,56 @@
+/* pages/message/message.wxss */
+page{
+  background: #f1f1f1;
+}
+.card {
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-left: 18rpx;
+  margin-top: 40rpx;
+  width: 95%;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #c2c1c1;
+}
+
+.card-title {
+  color: #d12828;
+  padding-top: 20rpx;
+  text-align: left;
+  margin-left: 40rpx;
+  font-size: 20px;
+}
+
+.card-date {
+  padding-top: 10rpx;
+  color: #c2c1c1;
+  text-align: left;
+  margin-left: 40rpx;
+  width: 630rpx;
+  border-bottom: 1px solid #c2c1c1;
+  font-size: 14px;
+}
+
+.card-img {
+  margin-top: 30rpx;
+  height: 300rpx;
+}
+
+.card-desc {
+  width: 630rpx;
+  text-align: left;
+  margin-left: 40rpx;
+  margin-top: 15rpx;
+  border-bottom: 1px solid #c2c1c1;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.card-info {
+  text-align: left;
+  margin-left: 40rpx;
+  color: #615d5d;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 630rpx;
+  font-size: 15px;
+}

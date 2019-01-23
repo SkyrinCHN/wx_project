@@ -1,0 +1,14 @@
+<!--pages/message/message.wxml-->
+<view class='card' wx:for="{{list}}" wx:key="index">
+  <view class='card-title'>{{item.title}}
+  </view>
+  <view class='card-date '>{{item.ctime}}
+  </view>
+  <view>
+    <image class='card-img' src='{{item.img_url}}'></image>
+  </view>
+  <view class='card-desc'>{{item.desc2}}
+  </view>
+  <view class='card-info arrow'>查看详细
+  </view>
+</view>

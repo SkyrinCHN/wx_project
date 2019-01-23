@@ -1,0 +1,3 @@
+<!--pages/test/success04/success04.wxml-->
+<view>{{uname}},欢迎您</view>
+<button class='boxbutton' bindtap='logout'>退出登录</button>

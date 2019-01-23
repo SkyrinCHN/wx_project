@@ -1,0 +1,7 @@
+<!--pages/test/login03/login03.wxml-->
+<form bindsubmit='login'>
+<view>
+  <input type='text' name="uname"></input>
+</view>
+  <view> <button form-type='submit' class='boxbutton'>登录</button> </view>
+</form>

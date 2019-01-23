@@ -1,0 +1,13 @@
+<!--pages/product/product.wxml-->
+<form bindsubmit='checkForm'>
+  <view class='cell-item'>
+    <input type='text' name='pname' placeholder='商品名称'></input>
+  </view>
+  <view class='cell-item'>
+    <input type='text' name='price' placeholder='商品价格'></input>
+  </view>
+  <view class='cell-item'>
+    <button form-type='submit' class='boxbutton'>添加商品</button>
+    <button class='boxbutton'>清空重填</button>
+  </view>
+</form>
