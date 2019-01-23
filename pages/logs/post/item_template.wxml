@@ -1,0 +1,18 @@
+<!-- 模板文件 -->
+<template name="item_user">
+  <view class='item'>{{user.name}}</view>
+</template>
+<template name="item_product">
+<view wx:for="{{product}}" wx:key="index" class='pItem'>
+  <view>{{item.id}}</view>
+  <view>{{item.pname}}</view>
+  <view>{{item.price}}</view>
+</view>
+</template>
+<template name="item_swiper">
+  <swiper class='swiper' autoplay="{{true}}" indicator-dots="{{true}}" duration="500" interval="2000">
+    <swiper-item class="swiper-item" wx:for="{{list}}" wx:key="index">
+      <image src="{{item.img_url}}" lazy-load="{{true}}" autoplay="true" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</template>

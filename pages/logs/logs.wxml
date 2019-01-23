@@ -1,6 +1,9 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
-</view>
+<!-- 引入模板 -->
+<import src = "post/item_template.wxml"/>
+<!-- 调用指定的模板 -->
+<template is="item_user" data="{{user}}"></template>
+
+<template is="item_product" data="{{product}}"></template>
+
+<template is ="item_swiper" data="{{list}}"></template>

@@ -18,7 +18,6 @@
   display:inline-block;
   height: 70rpx;
   width: 300rpx;
-  margin-left: 50rpx;
   line-height: 70rpx;
   color: whitesmoke;
   box-sizing: border-box;

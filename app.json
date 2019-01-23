@@ -1,5 +1,6 @@
 {
-  "pages": [
+  "pages": [ "pages/logs/logs",
+    "pages/uploadImage/uoloadImage",
     "pages/message/message",
     "pages/product/product",
     "pages/profile/profile",
@@ -8,7 +9,6 @@
     "pages/test/login03/login03",
     "pages/test/test",
     "pages/shopList/shopList",
-    "pages/logs/logs",
     "pages/test/addExam/addExam",
     "pages/test/delExam/delExam",
     "pages/test/success04/success04"

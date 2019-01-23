@@ -5,43 +5,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[], //消息数组
-    pno:1,
-    pageSize:2
+    list: [], //分页数据
+    pageIndex: 0, //分页页码
+    pageSize: 2,  //每页大小
+    hasMore: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var url ="http://localhost:3000/getMessage";
-    var pno = this.data.pno;
-    var pageSize = this.data.pageSize;
-    console.log(pno,pageSize);
+    this.getMessage();
+  },
+  getMessage:function(){
+    var url = "http://localhost:3000/getMessage";
+    if (this.data.hasMore == false) { return };
+    wx.showLoading({ title: 'Loading' });
+    var pn = this.data.pageIndex + 1;
+    var ps = this.data.pageSize;
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
     wx.request({
       url: url,
-      data:{
-        pno:pno,
-        pageSize:pageSize
-      },
-      success:(res)=>{
-        // console.log(res.data.data);
+      data: { pno: pn, pageSize: ps },
+      success: (res) => {
+        var rows = this.data.list.concat(res.data.data);
+        var pc = res.data.pageCount; //总页数
+        var frag = pn < pc; //判断当前页数是否小于总页数
         this.setData({
-          list:res.data.data
-        })
-        console.log(this.data.list);
-      },
-      fail:(res)=>{
-        console.log("请求消息列表出错了")
+          list: rows,
+          pageIndex: pn,
+          hasMore: frag
+        });
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -69,14 +73,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.getMessage();
   },
 
   /**

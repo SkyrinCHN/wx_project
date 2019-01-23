@@ -1,0 +1,2 @@
+<!--pages/uploadImage/uoloadImage.wxml-->
+<button class='boxbutton' bindtap='chooseImage'>上传图片</button>

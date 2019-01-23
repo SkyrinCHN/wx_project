@@ -1,3 +1,4 @@
+@import "post/item_template.wxss";
 .log-list {
   display: flex;
   flex-direction: column;
