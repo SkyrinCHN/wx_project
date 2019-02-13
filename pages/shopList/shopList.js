@@ -18,14 +18,14 @@ Page({
     this.getShopList(); //调用获取商店列表的方法
   },
   getShopList: function () {//获取商店列表
+    wx.showLoading({ title: 'Loading' });
     var url = "http://localhost:3000/getShopList";
     if (this.data.hasMore == false) { return };
-    wx.showLoading({ title: 'Loading' });
     var pn = this.data.pageIndex + 1;
     var ps = this.data.pageSize;
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
+    setTimeout(function(){
+      wx.hideLoading();
+    },1000)
     wx.request({
       url: url,
       data: { pno: pn, pageSize: ps },

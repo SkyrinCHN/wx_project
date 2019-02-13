@@ -1,10 +1,11 @@
 {
-  "pages": [ "pages/logs/logs",
+  "pages": [ 
+    "pages/index/index",
+    "pages/logs/logs",
     "pages/uploadImage/uoloadImage",
     "pages/message/message",
     "pages/product/product",
     "pages/profile/profile",
-    "pages/index/index",
     "pages/test/music/music",
     "pages/test/login03/login03",
     "pages/test/test",

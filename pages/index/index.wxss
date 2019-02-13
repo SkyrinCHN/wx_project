@@ -28,8 +28,8 @@
   border-right: 0 none;
 }
 .index-nav .nav-item image{
-  width: 102rpx;
-  height: 102rpx;
+  width: 80rpx;
+  height: 80rpx;
 }
 
 .index-enter{

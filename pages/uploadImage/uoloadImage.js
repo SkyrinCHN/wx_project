@@ -1,3 +1,4 @@
+
 // pages/uploadImage/uoloadImage.js
 Page({
 
